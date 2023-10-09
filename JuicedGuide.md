@@ -36,7 +36,9 @@ To get around the limitations of Juiced Config, we can edit the game's registry 
 * Navigate to "Computer\HKEY_CURRENT_USER\Software\THQ\Juiced".
 
 ### Custom resolution
-!!! Make sure to set the base to Decimal before inputting the desired values. !!!
+!!!
+Make sure to set the base to Decimal before inputting the desired values.
+!!!
 * Set "RezWidth" to the width of your desired resolution. (i.e. 1920 for 1920x1080)
 * Set "RezHeight" to the height of your desired resolution. (i.e. 1080 for 1920x1080)
 * Make sure "RezDepth" is set to 32.
@@ -45,7 +47,9 @@ To get around the limitations of Juiced Config, we can edit the game's registry 
 If anti-aliasing level 8 was not available in Juiced Config, you can manually set "Antialiasing" to 8.
 
 ### Change language
-!!! Make sure to set the base to Decimal before inputting the desired value. !!!
+!!!
+Make sure to set the base to Decimal before inputting the desired value.
+!!!
 You can change the game's language to any of the five supported by changing "language" to:
 * English: 9
 * French: 1036
@@ -60,7 +64,9 @@ You can change the game's language to any of the five supported by changing "lan
 * Prevents your car from veering off to one side on its own
 
 ### Installation (official .exe)
-!!! This .exe requires an actual disc to be present, and does not allow for certain .exe patches. !!!
+!!!
+This .exe requires an actual disc to be present, and does not allow for certain .exe patches.
+!!!
 * Download [Juiced Patch #1 - 08th Jul 2005.zip from PCGamingWiki](https://community.pcgamingwiki.com/files/file/2203-juiced-patch-1/)
 * Extract Juiced.exe to your Juiced folder, overwriting the original when prompted
 
@@ -68,7 +74,9 @@ You can change the game's language to any of the five supported by changing "lan
 
 Runs without the CD inserted and allows all .exe patches.
 
-!!! We do not offer download links to the Z3r0n3 .exe at this time. !!!
+!!!
+We do not offer download links to the Z3r0n3 .exe at this time.
+!!!
 
 * Z3r0n3 v1: 30,097,408 bytes, SHA256: c01235d92323f957ec114faadc2ac0e3c0cd16791ad1e9392936fb1a8dbd6065
 * Z3r0n3 v2: 13,760,830 bytes, SHA256: 1cc6388d6bb4bb813f0044ae94ed4b5171ba8cdd2b1d8cc5830f08c1c8dad7b7
