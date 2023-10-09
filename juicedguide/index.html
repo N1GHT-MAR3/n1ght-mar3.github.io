@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.750103570112">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.750168378761">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -30,11 +30,11 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../resources/css/retype.css?v=3.5.0.750103570112" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.5.0.750168378761" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.5.0.750103570112" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.5.0.750168378761" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.5.0.750103570112" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.5.0.750168378761" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -175,18 +175,6 @@
         <span>Setup Guide</span>
     </h1>
 </doc-anchor-target>
-<div class="-mt-3 mb-12 flex flex-wrap text-sm text-gray-400 dark:text-dark-350 items-center">
-    <div class="flex items-center">
-        <div>By</div>
-        <div class="ml-2 flex items-center">
-          <div class="shrink-0 w-8 h-8 overflow-hidden rounded-full">
-            <svg width="2rem" height="2rem" xmlns="http://www.w3.org/2000/svg" fill="white"><g><rect width="2rem" height="1.7rem" fill="#c5c5c5"/><circle r="0.44rem" cy="0.83rem" cx="1rem"/><ellipse ry="0.96rem" rx="0.77rem" cy="2.15rem" cx="1rem"/></g></svg>
-          </div>
-          <div class="ml-1 whitespace-nowrap text-gray-500 dark:text-dark-350">N1GHTMAR3</div>
-        </div>
-    </div>
-</div>
-
 <div class="flex mb-6">
     <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
     <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
@@ -208,6 +196,82 @@
         </div>
     </div>
 </div>
+<doc-anchor-target id="installing-the-game">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#installing-the-game">#</doc-anchor-trigger>
+        <span>Installing the game</span>
+    </h2>
+</doc-anchor-target>
+<p>Avoid installing the game to the default directory, if possible. Program Files (x86) is a protected directory that requires administrator privileges to make changes, which can cause incompatibility with many programs.</p>
+<p>After the game is installed, uncheck the &quot;Launch Juiced?&quot; checkbox. You will most likely not be able to run the game in its current state.</p>
+<doc-anchor-target id="juiced-config">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#juiced-config">#</doc-anchor-trigger>
+        <span>Juiced Config</span>
+    </h2>
+</doc-anchor-target>
+<p>Run JuicedConfig.exe in the Juiced folder, wherever you installed it to. This will initialize some settings that the game needs to run.</p>
+<p>Set your desired resolution (making sure to pick 32-bit color), anti-aliasing level, and whether or not you want windowed mode or widescreen. Bear the following in mind, however:</p>
+<ul>
+<li>Resolutions above 1920x1080 are not available in the Config.</li>
+<li>Depending on your hardware, the Config may not show all anti-aliasing levels, even if your hardware can handle it. The maximum level the game supports is 8.</li>
+<li>If Windowed mode is enabled, the available resolutions will be drastically cut down.</li>
+<li>Widescreen scaling is broken for non-16:10 aspect ratios.</li>
+</ul>
+<p>All of the above issues are fixable outside Juiced Config, so don&#x27;t worry if your graphics settings are not perfect.</p>
+<p>Once you&#x27;re done, click OK, then OK to the dialog that appears.</p>
+<doc-anchor-target id="registry-tweaks">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#registry-tweaks">#</doc-anchor-trigger>
+        <span>Registry tweaks</span>
+    </h2>
+</doc-anchor-target>
+<p>To get around the limitations of Juiced Config, we can edit the game&#x27;s registry keys directly, allowing us to set whatever we want.</p>
+<ul>
+<li>Hold the Windows button and press R to bring up the Run dialog.</li>
+<li>Type &quot;regedit&quot; and press enter, granting administrator privileges if prompted.</li>
+<li>Navigate to &quot;Computer\HKEY_CURRENT_USER\Software\THQ\Juiced&quot;.</li>
+</ul>
+<doc-anchor-target id="custom-resolution">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#custom-resolution">#</doc-anchor-trigger>
+        <span>Custom resolution</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li>Set &quot;RezWidth&quot; to the width of your desired resolution. (i.e. 1920 for 1920x1080)</li>
+<li>Set &quot;RezHeight&quot; to the height of your desired resolution. (i.e. 1080 for 1920x1080)
+<ul>
+<li>Make sure to set the base to Decimal before inputting the desired value.</li>
+</ul>
+</li>
+<li>Make sure &quot;RezDepth&quot; is set to 32.</li>
+</ul>
+<doc-anchor-target id="full-anti-aliiasing">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#full-anti-aliiasing">#</doc-anchor-trigger>
+        <span>Full anti-aliiasing</span>
+    </h3>
+</doc-anchor-target>
+<p>If anti-aliasing level 8 was not available in Juiced Config, you can manually set &quot;Antialiasing&quot; to 8.</p>
+<doc-anchor-target id="change-language">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#change-language">#</doc-anchor-trigger>
+        <span>Change language</span>
+    </h3>
+</doc-anchor-target>
+<p>You can change the game&#x27;s language to any of the five supported by changing &quot;language&quot; to:</p>
+<ul>
+<li>English: 9</li>
+<li>French: 1036</li>
+<li>German: 7</li>
+<li>Italian: 16</li>
+<li>Spanish: 10
+<ul>
+<li>Make sure to set the base to Decimal before inputting the default value.</li>
+</ul>
+</li>
+</ul>
 
                                 
                                 <!-- Required only on API pages -->
