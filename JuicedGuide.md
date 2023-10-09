@@ -36,20 +36,79 @@ To get around the limitations of Juiced Config, we can edit the game's registry 
 * Navigate to "Computer\HKEY_CURRENT_USER\Software\THQ\Juiced".
 
 ### Custom resolution
+!!! Make sure to set the base to Decimal before inputting the desired values. !!!
 * Set "RezWidth" to the width of your desired resolution. (i.e. 1920 for 1920x1080)
 * Set "RezHeight" to the height of your desired resolution. (i.e. 1080 for 1920x1080)
-  * Make sure to set the base to Decimal before inputting the desired value.
 * Make sure "RezDepth" is set to 32.
 
-### Full anti-aliiasing
+### Full anti-aliasing
 If anti-aliasing level 8 was not available in Juiced Config, you can manually set "Antialiasing" to 8.
 
 ### Change language
+!!! Make sure to set the base to Decimal before inputting the desired value. !!!
 You can change the game's language to any of the five supported by changing "language" to:
 * English: 9
 * French: 1036
 * German: 7
 * Italian: 16
 * Spanish: 10
-  * Make sure to set the base to Decimal before inputting the default value.
+
+## Install the patch
+
+* Fixes the "Juiced requires virtual memory to be enabled" error
+* Mitigates random crashes
+* Prevents your car from veering off to one side on its own
+
+### Installation (official .exe)
+!!! This .exe requires an actual disc to be present, and does not allow for certain .exe patches. !!!
+* Download [Juiced Patch #1 - 08th Jul 2005.zip from PCGamingWiki](https://community.pcgamingwiki.com/files/file/2203-juiced-patch-1/)
+* Extract Juiced.exe to your Juiced folder, overwriting the original when prompted
+
+### Installation (Z3r0n3 .exe)
+
+Runs without the CD inserted and allows all .exe patches.
+
+!!! We do not offer download links to the Z3r0n3 .exe at this time. !!!
+
+* Z3r0n3 v1: 30,097,408 bytes, SHA256: c01235d92323f957ec114faadc2ac0e3c0cd16791ad1e9392936fb1a8dbd6065
+* Z3r0n3 v2: 13,760,830 bytes, SHA256: 1cc6388d6bb4bb813f0044ae94ed4b5171ba8cdd2b1d8cc5830f08c1c8dad7b7
+
+!!!warning Warning
+The Z3r0n3 v2 .exe may cause crashes when searching for games online, though this is currently unconfirmed.
+!!!
+
+Extract Juiced.exe to your Juiced folder, overwriting the original when prompted.
+
+## [D3D9Wrapper](https://github.com/ThirteenAG/d3d9-wrapper/releases/latest)
+*by ThirteenAG*
+
+* Allows for borderless fullscreen
+* Can force the game to open on the primary monitor
+* Alleviates instability caused by alt-tabbing
+
+### Installation
+
+1. Download d3d9.zip from the link above
+2. Extract d3d9.dll and d3d9.ini to your Juiced folder
+3. Open d3d9.ini in a text editor
+4. Change the following settings to your preference:
+  * ForceWindowedMode = 1 and ForceWindowStyle = 1 for borderless fullscreen
+  * UsePrimaryMonitor = 1 to force the game to use the primary monitor
+  * DoNotNotifyOnTaskSwitch = 1 to prevent disconnects when alt-tabbing online
+  !!!warning Warning
+DoNotNotifyOnTaskSwitch prevents the game's control mapper from working. If you need to change your controls, make sure this is disabled first.
+!!!
+
+## [Microsoft DirectInput Mapper](https://community.pcgamingwiki.com/files/file/58-microsoft-directinput-mapper/)
+*installer by Garrett*
+
+Fixes the control mapper on modern versions of Windows.
+
+### Installation ###
+1. Download Microsoft_DirectInput_Mapper.zip from the link above
+2. Extract anywhere
+3. Run "install (run as admin).bat" as administrator
+4. Click OK on the dialog that appears
+
+Selecting "CONTROLS" in the in-game settings menu should now work properly.
 
