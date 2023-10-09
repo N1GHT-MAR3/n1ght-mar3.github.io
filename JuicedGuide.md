@@ -112,7 +112,7 @@ DoNotNotifyOnTaskSwitch prevents the game's control mapper from working. If you 
 
 Fixes the control mapper on modern versions of Windows.
 
-### Installation ###
+### Installation
 1. Download Microsoft_DirectInput_Mapper.zip from the link above
 2. Extract anywhere
 3. Run "install (run as admin).bat" as administrator
@@ -120,3 +120,53 @@ Fixes the control mapper on modern versions of Windows.
 
 Selecting "CONTROLS" in the in-game settings menu should now work properly.
 
+## [JuicedWidescreenFix](https://github.com/TFP-dev/JuicedWidescreenFix)
+*by TFP*
+
+Scales widescreen properly for all aspect ratios, and allows for custom FOV.
+
+Installation instructions are in the link.
+
+## Online patch
+
+Restores online functionality by redirecting to [OpenSpy](https://beta.openspy.net).
+
+### Installation
+
+1. Download the latest release of [Juiced Editor](https://github.com/N1GHT-MAR3/JuicedEditor/releases/latest)
+2. Open JuicedEditor.exe
+3. Open Juiced.exe in your Juiced folder (File -> Open...)
+  * If it says ".exe type could not be determined", ignore it and click OK
+4. Click "Patch Servers"
+5. Click "OK" on the dialog that appears
+6. Save your changes (File -> Save)
+  * If Juiced Editor fails to save, try launching as an administrator, and check Juiced.exe's properties to make sure it's not read-only
+7. Click OK and exit Juiced Editor
+
+## In-game configuration
+
+Run Juiced.exe. The game should launch without any issues.
+
+### Controls
+
+After creating a profile, go to the main menu -> OPTIONS -> CONTROLS. The Microsoft DirectInput Mapper should appear.
+
+* Select your desired input device at the top of the window.
+* Press a button on your controller/keyboard, and the corresponding button should turn yellow in the control mappings.
+* Double-click the highlighted button, and you can remap it as you see fit.
+* If both of your triggers correspond to Z Axis, bind Throttle, and it will automatically split throttle and brake between the two triggers.
+* Click OK once you're done.
+
+### Create an online account
+
+* At the main menu, ONLINE -> CREATE PROFILE.
+* Choose a nickname, email, and password. You don't have to use a real email.
+* Click SUBMIT, and you should hopefully be logged in and sent to the ONLINE screen.
+
+!!!
+Once you enter the Online screen for the first time, a Windows firewall pop-up should appear. This may be hidden behind the game window depending on your graphics settings, in which case you should alt-tab to find it. Allow Juiced access through the desired network types.
+!!!
+
+!!!danger Danger
+Once you log-in, your password is saved in plaintext to your current save file. Anyone can see it by opening it up in a hex editor. NEVER share your save file with anyone once you've logged in with it!
+!!!
