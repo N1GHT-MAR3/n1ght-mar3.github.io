@@ -10,6 +10,8 @@
 
     /*background-color: #000;*/
     background-attachment: fixed; 
+    background-size: cover;
+    background-position: center;
     color: #fff;
     font-family: sans-serif;
     text-shadow: -1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000; /* creates text outline */
@@ -35,22 +37,6 @@ h1, h2 {
 h3, h4 {
     padding: 1% 0%;
     margin-left: 8%;
-}
-
-@media only screen and (max-width: 959px) {
-    .container {
-        display: grid;
-        grid-template-columns: auto;
-        margin: 1%;
-    }
-}
-
-@media only screen and (min-width: 960px) {
-    .container {
-        display: grid;
-        grid-template-columns: auto auto auto;
-        margin: 1%;
-    }
 }
 
 /*
@@ -146,9 +132,31 @@ h3, h4 {
 }
 
 @media only screen and (max-width: 1760px) {
+    
+}
+
+@media only screen and (max-aspect-ratio: 1) {
+    .container {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 1%;
+    }
+
     .imgGrid {
         grid-template-columns: auto;
         overflow: hidden;
         object-fit: contain;
+    }
+
+    img {
+        max-width: 720px;
+    }
+}
+
+@media only screen and (min-aspect-ratio: 1) {
+    .container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        margin: 1%;
     }
 }
