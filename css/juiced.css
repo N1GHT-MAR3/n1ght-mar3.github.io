@@ -1,0 +1,110 @@
+@font-face {
+    font-family: "Concielian";
+    src: url("../font/concielian.ttf") format("truetype");
+}
+
+* {
+    /* CSS reset */
+    margin: 0;
+    padding: 0;
+
+    /*background-color: #000;*/
+    background-attachment: fixed; 
+    color: #fff;
+    font-family: sans-serif;
+    text-shadow: -1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000; /* creates text outline */
+}
+
+a {
+    color: #55f;
+}
+
+header {
+    text-align: center;
+}
+
+@media only screen and (max-width: 959px) {
+    .container {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 1%;
+    }
+}
+
+@media only screen and (min-width: 960px) {
+    .container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        margin: 1%;
+    }
+}
+
+/*
+.container p, a {
+    text-shadow: -1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000;
+}
+*/
+
+.section {
+    border-radius: 10px;
+    border-color: #fff;
+    border-width: 2px;
+    border-style: solid;
+    overflow: hidden; /* needed to prevent bg color overlapping border */
+    margin: 1%; /* adds spacing between sections */
+    padding: 1% /* FIX LACK OF BG COLOR OVERFLOW ON DISCORD SECTION */
+}
+
+.section h1, .section h2 {
+    text-align: center;
+    font-family: "Concielian", sans-serif;
+    text-shadow: -1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000;
+}
+
+/*
+#resources {
+    background-color: #383;
+}
+
+#resources * {
+    background-color: #383;
+}
+
+#tools {
+    background-color: #aa3;
+}
+
+#tools * {
+    background-color: #aa3;
+}
+
+#mods {
+    background-color: #a63;
+}
+
+#mods * {
+    background-color: #a63;
+}
+
+*/
+
+#resources, #tools, #mods {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.item {
+    border-radius: 5px;
+}
+
+/* Discord formatting; see https://discord.com/branding */
+#discord * {
+    background-color: #5865f2; /* Blurple */
+    color: #fff;
+    width: 94vw; /* THIS IS OFFCENTER, FIX */
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+#discord:hover * {
+    background-color: #98a5f2; /* Blurple */
+}

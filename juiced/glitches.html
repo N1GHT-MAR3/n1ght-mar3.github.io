@@ -2,185 +2,254 @@
 <html lang="en-US">
     <head>
         <title>Juiced glitches</title>
+        <link rel="stylesheet" href="../css/juicedGlitches.css">
+        <meta charset="UTF-8">
+        <meta name="description" content="Various bugs, glitches, and oversights found in the Juiced racing games. Work in progress.">
+        <meta name="keywords" content="Juiced, glitches">
+        <meta name="author" content="N1GHTMAR3">
+
+
         <style>
-            * {
-                background-color: #1f1f1f;
-                color: #ffffff;
-                font-family: Helvetica;
-            }
-            a {
-                color: #9f9fff
-            }
-            p {
-                font-size: large;
+            body {
+                background-image: url("../img/juiced_ch1nw_1.jpg");
             }
         </style>
     </head>
-    <header>
-        <img src="juiced_logo.png" alt="Juiced" style="width: 256px">
-    </header>
+    
     <body>
+        <header>
+            <a href="index.html"><img src="../img/juiced_logo.png" alt="Juiced logo" style="height: 64px;"></a>
+        </header>
         <h1>Glitches</h1>
-        <h2>Juiced & Juiced: Eliminator</h2>
+        <h2><img src="../img/juiced_logo.png" alt="Juiced logo" style="height: 64px;"><img src="../img/juicedElim_logo.png" alt="Juiced: Eliminator logo" style="height: 64px;"></h2>
         <h3>Focus glitch/Civic glitch</h3>
+        <div class="textbox">
+            <p>
+                The Focus glitch (or the Civic glitch in Eliminator) occurs when entering certain sprint races in which the AI has no possible cars they can use. In this state, the game falls back to giving all opponents stock 2004 Focus ZTS's in the original Juiced, and stock Honda Civic Si's in Eliminator.
+            </p>
 
-        <p>
-            The Focus glitch (or the Civic glitch in Eliminator) occurs when entering certain sprint races in which the AI has no possible cars they can use. In this state, the game falls back to giving all opponents stock 2004 Focus ZTS's in the original Juiced, and stock Honda Civic Si's in Eliminator.
-        </p>
-        <img src="juiced_focusGlitchMethod1.jpg" alt="The grid before the start of a race in Juiced, showing the player's 700 BHP Mitsubishi 3000GT against three stock Ford Focus ZTSs." style="width: 720px">
-        <br>
-        <img src="juicedElim_focusGlitchMethod1.jpg" alt="The loading screen before the start of a race in Juiced: Eliminator, showing the player's 700 BHP Mitsubishi 3000GT against three stock Honda Civic Sis.">
-        <p>
+            <div class="imgGrid">
+                <img src="../img/juiced_focusGlitchMethod1.jpg" alt="The grid before the start of a race in Juiced, showing the player's 700 BHP Mitsubishi 3000GT against three stock Ford Focus ZTSs." style="width: 720px"> 
+                <img src="../img/juicedElim_focusGlitchMethod1.jpg" alt="The loading screen before the start of a race in Juiced: Eliminator, showing the player's 700 BHP Mitsubishi 3000GT against three stock Honda Civic Sis.">
+            </div>
+
+            <p>
             The AI rivals in Juiced do not have access to as many options when it comes to upgrading their car, leading to some instances where the player can get a car into a class the AI can't. The game will normally prevent the player from hosting races that would invoke this limitation. For example, even though you can build a class 3 Monaro CV8, you cannot host a class 3 Holden race. Try to, and the game will give you the following error message:
-        </p>
-        <img src="juiced_focusGlitchCannotHost.jpg" alt="Cannot Host Event - The other crews have no cars that meet these criteria." style="width: 720px">
-        <p>
-            There is, however, one oversight the developers didn't account for. Whenever you enter a sprint race, the game will only pit you against cars of the same drivetrain. After all, if you bring your shitbox Corsa to your local drags, it wouldn't be very fair for Maria to bring an Evo VI and smoke you off the line. This drivetrain filter goes unchecked, so as long as there's any car that the AI can bring for a specific type of event, the game will let you host it. If the only eligible cars then get filtered out, the game is put in a situation where it has no cars to give the AI. It's at this point where the game activates a failsafe where it just gives everyone a default car.
-        </p>
-        <p>
-            Why these cars in particular? In the game's files, there is a script called cardefs.txt where all of the game's cars are initialized, and where several variables are defined including its long name, manufacturer and country, engine sound, all of its body parts, etc. In Juiced, this script defines the Focus ZTS first, and in Juiced: Eliminator, the Honda Civic Si is defined first. Thus, this glitch is, in essence, the game falling back on the first car it knows. If you were to swap its position in cardefs with another car, that car would then become the default instead.
-        </p>
-        <p>
-            There are currently five known ways to trigger the Focus glitch under normal circumstances, and two known ways to trigger the Civic glitch, both involving some creative exploitation of some of the game's limitations. (Bear in mind this glitch only works if you are the active driver, as the drivetrain filter is not applied if you send in a crewmate in your place.)
-        </p>
+            </p>
 
+            <img src="../img/juiced_focusGlitchCannotHost.jpg" alt="Cannot Host Event - The other crews have no cars that meet these criteria." style="width: 720px">
+
+            <p>
+            There is, however, one oversight the developers didn't account for. Whenever you enter a sprint race, the game will only pit you against cars of the same drivetrain. After all, if you bring your shitbox Corsa to your local drags, it wouldn't be very fair for Maria to bring an Evo VI and smoke you off the line. This drivetrain filter goes unchecked, so as long as there's any car that the AI can bring for a specific type of event, the game will let you host it. If the only eligible cars then get filtered out, the game is put in a situation where it has no cars to give the AI. It's at this point where the game activates a failsafe where it just gives everyone a default car.
+            </p>
+            <p>
+            Why these cars in particular? In the game's files, there is a script called cardefs.txt where all of the game's cars are initialized, and where several variables are defined including its long name, manufacturer and country, engine sound, all of its body parts, etc. In Juiced, this script defines the Focus ZTS first, and in Juiced: Eliminator, the Honda Civic Si is defined first. Thus, this glitch is, in essence, the game falling back on the first car it knows. If you were to swap its position in cardefs with another car, that car would then become the default instead.
+            </p>
+            <p>
+            There are currently five known ways to trigger the Focus glitch under normal circumstances, and two known ways to trigger the Civic glitch, both involving some creative exploitation of some of the game's limitations. (Bear in mind this glitch only works if you are the active driver, as the drivetrain filter is not applied if you send in a crewmate in your place.)
+            </p>
+        </div>
+        
         <h4>Method 1: Mitsubishi 3000GT, class 2</h4>
-        <p>
-            Build a 3000GT with at least a level 3 intake, prototype exhaust, and prototype turbos. Then, use the ECU tuning to push the car into class 2. Enter into any sprint race.
-        </p>
-        <p>
-            One of the upgrades the AI is incapable of using is ECU tuning. This lets you fine-tune your car's power ±5%. In this case, the player can use it to tune a 3000GT to 700+ BHP, sending it into class 2.
-        </p>
-        <img src="juiced_ecuTuning.jpg" alt="A screenshot of the workshop in Juiced, showing a 3000GT being tuned via the ECU to 700 BHP." style="width: 720px">
-        <p>
-            Without it, even with all prototype parts, the 3000GT can only reach 688 BHP in their hands. As the 3000GT is the most powerful 4WD car in the game, there's no 4WD car the AI can use in class 2, and thus the glitch is triggered.
-        </p>
+        
+        <div class="textbox">
+            <p>
+                Build a 3000GT with at least a level 3 intake, prototype exhaust, and prototype turbos. Then, use the ECU tuning to push the car into class 2. Enter into any sprint race.
+            </p>
+            <p>
+                One of the upgrades the AI is incapable of using is ECU tuning. This lets you fine-tune your car's power ±5%. In this case, the player can use it to tune a 3000GT to 700+ BHP, sending it into class 2.
+            </p>
+            <img src="../img/juiced_ecuTuning.jpg" alt="A screenshot of the workshop in Juiced, showing a 3000GT being tuned via the ECU to 700 BHP." style="width: 720px">
+            <p>
+                Without it, even with all prototype parts, the 3000GT can only reach 688 BHP in their hands. As the 3000GT is the most powerful 4WD car in the game, there's no 4WD car the AI can use in class 2, and thus the glitch is triggered.
+            </p>
+        </div>
 
         <h4>Method 2: Nissan Skyline GT-R, class 7 (Juiced only)</h4>
-        <p>
-            Take a Skyline GT-R and use the ECU tuning to detune it to class 7. Enter it into a Nissan sprint race.
-        </p>
-        <img src="juiced_focusGlitchMethod2.jpg" alt="The grid before the start of a race in Juiced, showing the player's 299 BHP Nissan Skyline GT-R against three stock Ford Focus ZTSs." style="width: 720px">
-        <p>
-            Similarly to method 1, since the AI cannot use ECU tuning, they cannot get the Skyline below class 6. While the 300ZX and the 350Z start out in class 7, neither can be used since they're both RWD.
-        </p>
-        <p>
-            This method does not work in Juiced: Eliminator due to the lack of one-make races.
-        </p>
+
+        <div class="textbox">
+            <p>
+                Take a Skyline GT-R and use the ECU tuning to detune it to class 7. Enter it into a Nissan sprint race.
+            </p>
+            <img src="../img/juiced_focusGlitchMethod2.jpg" alt="The grid before the start of a race in Juiced, showing the player's 299 BHP Nissan Skyline GT-R against three stock Ford Focus ZTSs." style="width: 720px">
+            <p>
+                Similarly to method 1, since the AI cannot use ECU tuning, they cannot get the Skyline below class 6. While the 300ZX and the 350Z start out in class 7, neither can be used since they're both RWD.
+            </p>
+            <p>
+                This method does not work in Juiced: Eliminator due to the lack of one-make races.
+            </p>
+        </div>
         
         <h4>Method 3: any 4WD prototype car, class 7 or 6</h4>
-        <p>
-            Put four prototype parts on any 4WD car while keeping it within class 7 or 6. Enter it into a prototype sprint race.
-        </p>
-        <img src="juiced_focusGlitchMethod3.jpg" alt="The grid before the start of a race in Juiced, showing the player's 399 BHP Subaru Impreza WRX STi against three stock Ford Focus ZTSs." style="width: 720px">
-        <br>
-        <img src="juicedElim_focusGlitchMethod3.jpg" alt="The loading screen before the start of a race in Juiced: Eliminator, showing the player's 399 BHP Mitsubishi 3000GT against three stock Honda Civic Sis.">
-        <p>
-            This exposes the second main limitation the AI has on upgrading cars. While the player is able to mix and match different levels of parts, the AI can only upgrade a car five different ways:
-        </p>
-        <ul>
-            <li>stock, save for level 1 nitrous</li>
-            <li>all level 1 parts</li>
-            <li>all level 2 parts</li>
-            <li>all level 3 parts</li>
-            <li>all prototype parts</li>
-        </ul>
-        <p>
-            You can check this yourself: take a look under a rival's hood, either by selecting Check Car when challenged to a bet, or by jacking their ride in a pink slip. Their car will always conform to one of these five schemes, 100% of the time.
-        </p>
-        <img src="juiced_focusGlitchCarSpec.jpg" alt="The car specifications for one of Sue's 3000GTs, showing all level 3 performance parts." style="width: 720px">
-        <p>
-            This presents a problem with regards to prototype cars. For a car to be considered a prototype, all you need are four prototype parts. Since there are four categories of parts that do not affect power, the player can build a prototype car at any BHP (even a 110 BHP Punto, if you're so inclined). For the <i>AI</i> to build a prototype car, they're forced to use all seven parts, meaning they'll put out as much power as possible.
-        </p>
-        <p>
-            Given this restriction, the lowest power proto 4WD car the AI can use is the Eclipse GSX, at 444 BHP. They <i>can</i> use class 7 and 6 prototype cars, hence why class 7 and 6 prototype events can still exist, but only in FWD and RWD. Build a prototype 4WD car and keep it in either of those two classes, and the AI will have nothing to answer it with.
-        </p>
+
+        <div class="textbox">
+            <p>
+                Put four prototype parts on any 4WD car while keeping it within class 7 or 6. Enter it into a prototype sprint race.
+            </p>
+            <div class="imgGrid">
+            <img src="../img/juiced_focusGlitchMethod3.jpg" alt="The grid before the start of a race in Juiced, showing the player's 399 BHP Subaru Impreza WRX STi against three stock Ford Focus ZTSs." style="width: 720px">
+            <img src="../img/juicedElim_focusGlitchMethod3.jpg" alt="The loading screen before the start of a race in Juiced: Eliminator, showing the player's 399 BHP Mitsubishi 3000GT against three stock Honda Civic Sis.">
+            </div>
+            <p>
+                This exposes the second main limitation the AI has on upgrading cars. While the player is able to mix and match different levels of parts, the AI can only upgrade a car five different ways:
+            </p>
+            <ul>
+                <li>stock, save for level 1 nitrous</li>
+                <li>all level 1 parts</li>
+                <li>all level 2 parts</li>
+                <li>all level 3 parts</li>
+                <li>all prototype parts</li>
+            </ul>
+            <p>
+                You can check this yourself: take a look under a rival's hood, either by selecting Check Car when challenged to a bet, or by jacking their ride in a pink slip. Their car will always conform to one of these five schemes, 100% of the time.
+            </p>
+            <img src="../img/juiced_focusGlitchCarSpec.jpg" alt="The car specifications for one of Sue's 3000GTs, showing all level 3 performance parts." style="width: 720px">
+            <p>
+                This presents a problem with regards to prototype cars. For a car to be considered a prototype, all you need are four prototype parts. Since there are four categories of parts that do not affect power, the player can build a prototype car at any BHP (even a 110 BHP Punto, if you're so inclined). For the <i>AI</i> to build a prototype car, they're forced to use all seven parts, meaning they'll put out as much power as possible.
+                <br><br>
+                Given this restriction, the lowest power proto 4WD car the AI can use is the Eclipse GSX, at 444 BHP. They <i>can</i> use class 7 and 6 prototype cars, hence why class 7 and 6 prototype events can still exist, but only in FWD and RWD. Build a prototype 4WD car and keep it in either of those two classes, and the AI will have nothing to answer it with.
+            </p>
+        </div>
 
         <h4>Method 4: Dodge Viper GTS, class 4 (Juiced only)</h4>
-        <p>
-            Build a Viper GTS to class 4. Enter it into a Dodge sprint race.
-        </p>
-        <img src="juiced_focusGlitchMethod4.jpg" alt="The grid before the start of a race in Juiced, showing the player's 599 BHP Dodge Viper GTS against three stock Ford Focus ZTSs." style="width: 720px">
-        <p>
-            This might seem confusing. The Viper starts in class 5 and reaches all the way into class 1 with ease, so what's so special about class 4 that causes the Focus glitch?
-        </p>
-        <p>
-            Recall the five ways the AI can upgrade a car. The Viper starts at 468 BHP without any upgrades, making it eligible for class 5. If you take that Viper and put all level 1 parts on it, which is the next step up for the AI, it'll have 621 BHP... in class 3. Power upgrades are just a multiplier applied to the current BHP, meaning the amount of power you'll gain from an upgrade is directly proportional to how much power the car starts with. The Viper is unique in that, because of how much power it has stock, when following the AI's upgrade progression, it completely skips over class 4! This means you will never, <i>ever</i> see the AI bring a Viper to any class 4 race.
-        </p>
-        <p>
-            There is still another RWD Dodge that's eligible for class 4, though, and that's the 1969 Charger R/T. It starts with 444 BHP, and with all level 1 parts, it only reaches 589 BHP, landing it within class 4. So it should be eligible, right?
-        </p>
-        <p>
-            Well... yeah. It should. All of the conditions are met. And yet, you'll never see the Charger in a class 4 sprint race. Why? Because you'll never see the Charger in <i>any</i> sprint race.
-        </p>
-        <p>
-            For reasons we don't understand, the Charger is blacklisted from ever appearing in a sprint race in Career mode. No other car exhibits this behavior (including the other three classic muscle cars). We have no idea what causes it, or if it's even meant to happen. They're perfectly capable of picking one in Custom Race, and you can always give your crewmate one - in both instances, they drive the car perfectly fine.
-        </p>
-        <p>
-            If that sounds farfetched, remember that there is a certain infamous exploit in the game that involves class 1 cars... have you ever seen a Charger while using it? It can reach 941 BHP in the hands of the AI, more than the 907 BHP the Z06 is capable of... and yet the adage goes: "Always bet on the Viper, never bet on the Corvette." No mention, no trace of the old timer. If it could appear, the exploit would be even more reliable, since the Charger isn't nearly fast enough to compete with the Z06, let alone the Viper.
-        </p>
-        <p>
-            Whatever the cause may be, the Charger isn't eligible for sprint races, the Viper isn't eligible for class 4 races, and the FWD SRT-4 is obviously a no-go. All of that combined makes for a rather intricate glitch setup.
-        </p>
-        <p>
-            This method does not work in Juiced: Eliminator due to the lack of one-make races. Furthermore, it will not actually work on the Japanese PS2 version of the game. Because...
-        </p>
+        <div class="textbox">
+            <p>
+                Build a Viper GTS to class 4. Enter it into a Dodge sprint race.
+            </p>
+            <img src="../img/juiced_focusGlitchMethod4.jpg" alt="The grid before the start of a race in Juiced, showing the player's 599 BHP Dodge Viper GTS against three stock Ford Focus ZTSs." style="width: 720px">
+            <p>
+                This might seem confusing. The Viper starts in class 5 and reaches all the way into class 1 with ease, so what's so special about class 4 that causes the Focus glitch?
+            </p>
+            <p>
+                Recall the five ways the AI can upgrade a car. The Viper starts at 468 BHP without any upgrades, making it eligible for class 5. If you take that Viper and put all level 1 parts on it, which is the next step up for the AI, it'll have 621 BHP... in class 3. Power upgrades are just a multiplier applied to the current BHP, meaning the amount of power you'll gain from an upgrade is directly proportional to how much power the car starts with. The Viper is unique in that, because of how much power it has stock, when following the AI's upgrade progression, it completely skips over class 4! This means you will never, <i>ever</i> see the AI bring a Viper to any class 4 race.
+            </p>
+            <p>
+                There is still another RWD Dodge that's eligible for class 4, though, and that's the 1969 Charger R/T. It starts with 444 BHP, and with all level 1 parts, it only reaches 589 BHP, landing it within class 4. So it should be eligible, right?
+            </p>
+            <p>
+                Well... yeah. It should. All of the conditions are met. And yet, you'll never see the Charger in a class 4 sprint race. Why? Because you'll never see the Charger in <i>any</i> sprint race.
+            </p>
+            <p>
+                For reasons we don't understand, the Charger is blacklisted from ever appearing in a sprint race in Career mode. No other car exhibits this behavior (including the other three classic muscle cars). We have no idea what causes it, or if it's even meant to happen. They're perfectly capable of picking one in Custom Race, and you can always give your crewmate one - in both instances, they drive the car perfectly fine.
+            </p>
+            <p>
+                If that sounds farfetched, remember that there is a certain infamous exploit in the game that involves class 1 cars... have you ever seen a Charger while using it? It can reach 941 BHP in the hands of the AI, more than the 907 BHP the Z06 is capable of... and yet the adage goes: "Always bet on the Viper, never bet on the Corvette." No mention, no trace of the old timer. If it could appear, the exploit would be even more reliable, since the Charger isn't nearly fast enough to compete with the Z06, let alone the Viper.
+            </p>
+            <p>
+                Whatever the cause may be, the Charger isn't eligible for sprint races, the Viper isn't eligible for class 4 races, and the FWD SRT-4 is obviously a no-go. All of that combined makes for a rather intricate glitch setup.
+            </p>
+            <p>
+                This method does not work in Juiced: Eliminator due to the lack of one-make races. Furthermore, it will not actually work on the Japanese PS2 version of the game. Because...
+            </p>
+        </div>
 
         <h4>Method 5: Dodge Viper GTS, class 6 (Japanese PS2 only)</h4>
-        <p>
-            Detune a Viper GTS to class 6. Enter a Dodge sprint race.
-        </p>
-        <img src="juiced_focusGlitchMethod5.jpg" alt="The grid before the start of a race in the Japanese PS2 version of Juiced, showing the player's 399 BHP Dodge Viper GTS against three stock Ford Focus ZTSs.">
-        <p>
-            The Japanese PS2 version of Juiced is an interesting case. It's the last known build of Juiced to be released, a year after the original launch in 2005, and has some changes not found in any other version, including adjustments to several cars' handling files. The Viper was the only car to be nerfed in this version, starting out with just 405 BHP.
-        </p>
-        <img src="juiced_viperJPN.jpg" alt="A screenshot from the Japanese PS2 version of Juiced, showing a 405 BHP Viper in the dealership.">
-        <p>
-            Since it has much less power stock, level 1 upgrades are no longer enough to make the Viper leapfrog over class 4, hence why method 4 doesn't work on this version. In nerfing the Viper, though, the pendulum swung too far in the other direction and allowed for a different Focus glitch. Being so close to the bottom of class 5 makes it trivial to detune the Viper down to class 6.
-        </p>
-        <img src="juiced_viperJPNclass6.jpg" alt="A screenshot from the Japanese PS2 version of Juiced, showing the Viper being detuned to 399 BHP in the workshop.">
-        <p>
-            Since this is only possible with ECU tuning, this is off-limits to the AI, and the only other RWD Dodge in the game has even more power. What results is possibly the most obscure Focus glitch setup, exclusive to one of the strangest versions of Juiced.
-        </p>
 
-        <h2>Juiced & Juiced 2: Hot Import Nights</h2>
+        <div class="textbox">
+            <p>
+                Detune a Viper GTS to class 6. Enter a Dodge sprint race.
+            </p>
+            <img src="../img/juiced_focusGlitchMethod5.jpg" alt="The grid before the start of a race in the Japanese PS2 version of Juiced, showing the player's 399 BHP Dodge Viper GTS against three stock Ford Focus ZTSs.">
+            <p>
+                The Japanese PS2 version of Juiced is an interesting case. It's the last known build of Juiced to be released, a year after the original launch in 2005, and has some changes not found in any other version, including adjustments to several cars' handling files. The Viper was the only car to be nerfed in this version, starting out with just 405 BHP.
+            </p>
+            <img src="../img/juiced_viperJPN.jpg" alt="A screenshot from the Japanese PS2 version of Juiced, showing a 405 BHP Viper in the dealership.">
+            <p>
+                Since it has much less power stock, level 1 upgrades are no longer enough to make the Viper leapfrog over class 4, hence why method 4 doesn't work on this version. In nerfing the Viper, though, the pendulum swung too far in the other direction and allowed for a different Focus glitch. Being so close to the bottom of class 5 makes it trivial to detune the Viper down to class 6.
+            </p>
+            <img src="../img/juiced_viperJPNclass6.jpg" alt="A screenshot from the Japanese PS2 version of Juiced, showing the Viper being detuned to 399 BHP in the workshop.">
+            <p>
+                Since this is only possible with ECU tuning, this is off-limits to the AI, and the only other RWD Dodge in the game has even more power. What results is possibly the most obscure Focus glitch setup, exclusive to one of the strangest versions of Juiced.
+            </p>
+        </div>
+
+        <h2><img src="../img/juiced_logo.png" alt="Juiced logo" style="height: 64px;"><img src="../img/juiced2_logo.png" alt="Juiced 2: Hot Import Nights logo" style="height: 64px;"></h2>
 
         <h3>Tiny text</h3>
-        <p>When running the PC versions of Juiced 1 and 2 at a resolution beyond 1600x1200, the font files will no longer scale up properly, and will progressively become smaller with higher resolutions. In Juiced 2, the text on license plates will grow in size.</p>
 
-        <img src="juiced_4k.jpg" alt="The workshop in the PC version of Juiced, running at a resolution of 3840x2160, indicated by the text appearing smaller than normal." style="width: 720px;">
-        <br>
-        <img src="juiced2_4k.jpg" alt="The garage in the PC version of Juiced 2: Hot Import Nights, running at a resolution of 3840x2160, indicated by the UI text appearing smaller than normal, and the license plate text appearing larger than normal." style="width: 720px;">
+        <div class="textbox">
+            <p>When running the PC versions of Juiced 1 and 2 at a resolution beyond 1600x1200, the font files will no longer scale up properly, and will progressively become smaller with higher resolutions. In Juiced 2, the text on license plates will grow in size.</p>
 
-        <p>This is due to a limitation in how the PC ports handle fonts. Found in the ui.dat/fonts directory of both games, every .d8f (font) file has several copies designed for different horizontal resolutions (640px, 800px, 1024px, 1280px, 1600px, etc.) No font file exists for resolutions beyond this, thus this font scaling issue occurs.</p>
+            <div class="imgGrid">
+            <img src="../img/juiced_4k.jpg" alt="The workshop in the PC version of Juiced, running at a resolution of 3840x2160, indicated by the text appearing smaller than normal." style="width: 720px;">
+            <img src="../img/juiced2_4k.jpg" alt="The garage in the PC version of Juiced 2: Hot Import Nights, running at a resolution of 3840x2160, indicated by the UI text appearing smaller than normal, and the license plate text appearing larger than normal." style="width: 720px;">
+            </div>
 
-        <h2>Juiced</h2>
+            <p>This is due to a limitation in how the PC ports handle fonts. Found in the ui.dat/fonts directory of both games, every .d8f (font) file has several copies designed for different horizontal resolutions (640px, 800px, 1024px, 1280px, 1600px, etc.) No font file exists for resolutions beyond this, thus this font scaling issue occurs.</p>
+        </div>
+
+        <h2><img src="../img/juiced_logo.png" alt="Juiced logo" style="height: 64px;"></h2>
 
         <h3>"Watch yourself" glitch</h3>
-        <p>TBD</p>
+        <div class="textbox">
+            <p>
+                TBD
+            </p>
+        </div>
 
         <h3>Wrong save prompt</h3>
-        <p>When booting the game using the -i argument on the PC version, the game will bypass the profile selection screen, loading you into a default one. Autosave is disabled by default, and when re-enabling it through the Extras menu, the game will erroneously use the PlayStation 2 save prompt. This is a purely visual bug, and saving the game functions normally.</p>
+        <div class="textbox">
+            <p>When booting the game using the -i argument on the PC version, the game will bypass the profile selection screen, loading you into a default one. Autosave is disabled by default, and when re-enabling it through the Extras menu, the game will erroneously use the PlayStation 2 save prompt. This is a purely visual bug, and saving the game functions normally.</p>
+
+            <img src="../img/juiced_ps2SavePromptGlitch.jpg" alt="The PlayStation 2 save prompt displayed in the PC version, featuring a few invalid characters. It reads:
+            
+            Are you sure you want to save driver on memory card (PS2) in MEMORY CARD slot 1?" style="width: 720px;">
+        </div>
 
         <h3>Showoffs are unwinnable</h3>
-        <p>Showoffs in Career mode will always count as a loss in your stats, even if you beat the target score.</p>
+        <div class="textbox">
+            <p>
+                Showoffs in Career mode will always count as a loss in your stats, even if you beat the target score.
+            </p>
+        </div>
 
         <h3>Missing Australia filter</h3>
-        <p>When creating an online lobby, Australia is missing under the territory filter, making it impossible to host a lobby limited to just the Monaro CV8 and Falcon XR8.</p>
+        <div class="textbox">
+            <p>
+                When creating an online lobby, Australia is missing under the territory filter, making it impossible to host a lobby limited to just the Monaro CV8 and Falcon XR8.
+            </p>
+        </div>
 
         <h3>Mustang 99 GT spoiler glitch</h3>
-        <p>The meshes for the second and third spoiler for the Mustang 99 GT are mixed up between the menus and in game. Applying one of these spoilers in the Workshop will result in the other loading in a race (this can be seen by entering the Dynamometer).</p>
-        <p><a href="https://n1ghtmar3.com/juiced/#mods">A mod has been made to fix this for the PC version.</a></p>
+        <div class="textbox">
+            <p>
+                The meshes for the second and third spoiler for the Mustang 99 GT are mixed up between the menus and in game. Applying one of these spoilers in the Workshop will result in the other loading in a race (this can be seen by entering the Dynamometer).
+            </p>
+            <p>
+                <a href="./#mods">A mod has been made to fix this for the PC version.</a>
+            </p>
+
+            <div class="imgGrid">
+                <img src="../img/juiced_mustang2SpoilerGlitch.jpg" alt="The Ford Mustang 99 GT in the Workshop, with a high-profile wing." style="width: 720px;">
+                <img src="../img/juiced_mustang2SpoilerGlitch2.jpg" alt="That same Ford Mustang 99 GT in the Dynamometer, where the wing has changed into a ducktail spoiler." style="width: 720px;">
+            </div>
+        </div>
 
         <h3>S2000 decal error</h3>
-        <p>The ICE and tire decals on the left side of the S2000 are incorrectly mirrored.</p>
+        <div class="textbox">
+            <p>
+                The ICE and tire decals on the left side of the S2000 are incorrectly mirrored.
+            </p>
+
+            <img src="../img/juiced_s2000Decals.jpg" alt="The side profile of an upgraded Honda S2000, with its Yokohama and Alpine decals (representing tires and in-car entertainment, respectively) flipped horizontally.">
+        </div>
 
         <h3>Falcon XR8 texture error</h3>
-        <p>When applying the NU:UK front bumper on the Falcon XR8, the right half of the Ford badge on the grill erroneously mirrors over the left side.</p>
+        <div class="textbox">
+            <p>
+                When applying the NU:UK front bumper on the Falcon XR8, the right half of the Ford badge on the grill erroneously mirrors over the left side.
+            </p>
 
-        <h2>Juiced: Eliminator</h2>
+            <img src="../img/juiced_falconBadge.jpg" alt="The third aftermarket front bumper on the Ford Falcon XR8, manufactured by NU:UK, with the Ford badge on the grill mirrored over itself.">
+        </div>
+
+        <h2><img src="../img/juicedElim_logo.png" alt="Juiced: Eliminator logo" style="height: 64px;"></h2>
         
         <h3>Duplicate prototype exhaust</h3>
-        <p>Due to a developer oversight, there are two copies of the Rage SP9-SXE prototype exhaust. One instance was erroneously placed among the level 3 exhaust upgrades in exhausts.txt. There are some minor differences involving positional offsets, but this is purely visual at most, and there are no performance differences between the two upgrades.</p>
+        <div class="textbox">
+            <p>
+                Due to a developer oversight, there are two copies of the Rage SP9-SXE prototype exhaust. One instance was erroneously placed among the level 3 exhaust upgrades in GAME.DAT/scripts/exhausts.txt. There are some minor differences involving positional offsets, but this is purely visual at most, and there are no performance differences between the two upgrades.
+            </p>
+        </div>
     </body>
 </html>
