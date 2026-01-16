@@ -131,6 +131,10 @@ h3, h4 {
     align-items: center;
 }
 
+table {
+    margin: auto;
+}
+
 @media only screen and (max-aspect-ratio: 1/1) {
     .container {
         display: grid;

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Frequently Asked Questions</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Answers to frequent questions or issues regarding the Juiced games.">
+        <meta name="keywords" content="Juiced, faq, glitches, help">
+        <meta name="author" content="N1GHTMAR3">
+        <link rel="stylesheet" href="../css/juicedGlitches.css">
+
+        <style>
+            body {
+                background-image: url("../img/juiced_ea3mc_1.jpg");
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <a href="index.html"><img src="../img/juiced_logo.png" alt="Juiced logo" style="height: 64px;"></a>
+        </header>
+        <h1>Frequently Asked Questions</h1>
+        <h2>Troubleshooting</h2>
+
+        <!-- Add pictures to all of these -->
+
+        <h3>"Juiced requires virtual memory to be enabled"</h3>
+        <div class="textbox">
+            <!-- Check if limit increases to 4GB with a PAE patched .exe -->
+            <p>This is a bug in the original, unpatched PC version caused by having more than 2 GB of RAM. </p>
+            <p>Fixed by:</p>
+            <ul>
+                <li>Updating to the patched version (recommended)</li>
+                <li>Using <a href="https://github.com/GrimMaple/JuicedFixes" target="_blank">JuicedFixes</a> (may cause instability)</li>
+                <li>Running the game in Windows XP compatibility mode (not recommended, may cause instability)</li>
+            </ul>
+        </div>
+
+        <h3>How do I know which version my game is running?</h3>
+
+        <div class="textbox">
+            <p><a href="https://github.com/N1GHT-MAR3/JuicedEditor" target="_blank">Juiced Editor</a> can identify your game version after opening Juiced.exe in your game directory.</p>
+            <p>(NOTE: If Juiced Editor throws a warning saying ".exe type could not be determined. You may run into problems.", it most likely means you are running the Zer0n3 v1 or v2 crack. These are both patched versions. Juiced Editor is 100% compatible with them, it just doesn't know what they are. Will be fixed with Juiced Editor v2.)</p>
+            <p>Alternatively, check the file size of Juiced.exe in your game directory by opening its properties, and compare it to the following table:</p>
+
+            <!-- add Russian (and Czech?) .exe at some point -->
+            <table>
+                <tr>
+                    <th>.exe</th>
+                    <th>Patched?</th>
+                    <th>File size</th>
+                </tr>
+                <tr>
+                    <td>Original .exe</td>
+                    <td>No</td>
+                    <td>12,533,760 bytes</td>
+                </tr>
+                <tr>
+                    <td>Patched .exe</td>
+                    <td>Yes</td>
+                    <td>6,852,608 bytes</td>
+                </tr>
+                <tr>
+                    <td>Original HOODLUM crack (hlm-juic)</td>
+                    <td>No</td>
+                    <td>12,533,760 bytes</td>
+                </tr>
+                <tr>
+                    <td>Fixed HOODLUM crack (hlm-juif)</td>
+                    <td>No</td>
+                    <td>12,560,384 bytes</td>
+                </tr>
+                <tr>
+                    <td>Z3r0n3 crack (v1)</td>
+                    <td>Yes</td>
+                    <td>30,097,408 bytes</td>
+                </tr>
+                <tr>
+                    <td>Z3r0n3 crack (v2)</td>
+                    <td>Yes</td>
+                    <td>13,760,830 bytes</td>
+                </tr>
+            </table>
+        </div>
+
+        <h3>"There is a problem with your DirectInput registry settings."</h3>
+
+        <div class="textbox">
+            <p>This is caused by not having <a href="https://community.pcgamingwiki.com/files/file/58-microsoft-directinput-mapper/" target="_blank">Microsoft's DirectInput Mapper</a>, which isn't included in modern versions of Windows.</p>
+        </div>
+
+        <h3>Why does my car veer off to the side?</h3>
+
+        <div class="textbox">
+            <p>The unpatched version of the game only has a 1% steering deadzone by default, meaning an otherwise negligible amount of stick drift will manifest in game. </p>
+
+            <p>Fixed by:</p>
+
+            <ul>
+                <li>Updating to the patched version (recommended)</li>
+                <li>Downloading the <a href="https://community.pcgamingwiki.com/files/file/2208-juiced-controller-deadzone-fix" target="_blank">Controller Deadzone Fix</a> (only works on the unpatched version, must be unpacked to work with most mods)</li>
+            </ul>
+        </div>
+    </body>
+</html>
