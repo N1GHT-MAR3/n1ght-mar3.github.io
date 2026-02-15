@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Xf1re infodump - N1GHTMAR3.com</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Information about Xf1re and how to get games working on it. WIP as always.">
+        <meta name="keywords" content="Xfire, Xf1re">
+        <meta name="author" content="N1GHTMAR3">
+
+        <style>
+        * {
+            background-color: #11294f;
+            color: white;
+            font-family: sans-serif;
+        }
+        a {
+            text-decoration: none;
+            color: #ffd700;
+            font-weight: bold;
+        }
+        p {
+            margin: 1% 10%
+        }
+        h1, h2, h3, h4, footer {
+            text-align: center;
+        }
+        .disclaim {
+            text-align: center;
+            font-style: italic;
+            color: #999;
+            margin: 1% 10%;
+        }
+        ul {
+            margin: 1% 10%;
+            text-align: center;
+            list-style-position: inside;
+        }
+        table, th, td {
+            border-style: solid;
+            border-width: 1px;
+            border-spacing: 0px;
+            border-color: #999;
+        }
+        th {
+            position: sticky;
+            top: 0;
+        }
+        .code {
+            text-align: left;
+            font-family: monospace;
+            border-style: solid;
+            border-width: 1px;
+            border-color: #fff;
+            width: fit-content;
+            margin: auto;
+            padding: 1%;
+            background-color: #081427;
+        }
+    </style>
+    </head>
+    <body>
+        <h1>N1GHTMAR3.com</h1>
+        <h2><a href="https://xf1re.com/" target="_blank">Xf1re</a> infodump (WIP)</h2>
+        
+        <p class="disclaim">Disclaimer: I am not affiliated with the Xf1re project, the original Xfire program, or any developers involved with either. I'm just a fan who likes the software and wants to make it easier for everyone to contribute working game entries.</p>
+
+        <h3>Credits</h3>
+        <ul>
+            <li><b>digitalrat1337</b>, for hosting Xf1re and making this all possible</li>
+            <li><b>revenant567</b>, for being an incredibly helpful resource regarding all things Xfire, and showing me most of the things on this page</li>
+        </ul>
+
+        <h3>List of InGameFlags</h3>
+
+        <p class="disclaim">Explanation: This information as it stands is pooled from both the <a href="https://sourceforge.net/projects/xfiregamecustom/" target="_blank">Xfire Games Customizer program by Trainhappy and hypnotoadtrance</a>, and the <a href="https://xfgm.fandom.com/wiki/Xfire_GameMasters_Wiki?fandom=allow" target="_blank">Xfire GameMasters Wiki on Fandom</a>. The Description and Notes (Customizer) columns are taken from the former, and the Notes (Gamemasters) column from the latter. This information by the original authors is directly pasted in unless specified otherwise, and I take no ownership or responsibility for any of it. Xfire Games Customizer is under the public domain, and the content of the Xfire GameMasters Wiki is licensed under the <a href="https://www.fandom.com/licensing" target="_blank">Creative Commons Attribution-Share Alike License 3.0 (Unported) (CC BY-SA)</a>.</p>
+        <table>
+            <tr>
+                <th>Flag</th>
+                <th>Description</th>
+                <th>Notes (Customizer)</th>
+                <th>Notes (Gamemasters)</th>
+            </tr>
+            <tr>
+                <td><b>ACTIVATE_APP</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><b>BLOCK_ASYNC</td>
+                <td>Validate Input</td>
+                <td>Use this when some keys are passing through, but not others.</td>
+                <td>This flag is used when some keys are passing through, but not others. Call Of Duty is an example.</td>
+            </tr>
+            <tr>
+                <td><b>CLEAR_CLIP_CURSOR</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><b>CRASH_ENABLE</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><b>DDRAW_ACCELERATION</td>
+                <td></td>
+                <td></td>
+                <td>DDRAW_ACCELERATION seems to try and do hardware accelerated direct draw or modify the way Xfire ingame appears. Of course this would only work on XP or older Windows operating systems since Direct Draw is very outdated and most games using it are software accelerated anyways so this flag is insanely uncommon. Another issue that arises is sometimes it seems to keep affecting the game's ability to have an Xfire ingame overlay and sometimes you have to switch renderers to make it work again. </td>
+            </tr>
+            <tr>
+                <td><b>DDRAW_FLIP_MODE</td>
+                <td>DDRAW Flip (Direct Draw Only)</td>
+                <td>Flips the DDRAW 1 and 2 buffers to be 2 and 1.</td>
+                <td>This flag flips the DDRAW 1 and 2 buffers to be 2 and 1.</td>
+            </tr>
+            <tr>
+                <td><b>DDRAW_OVERLAY_MODE</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><b>DISABLE_64BIT</td>
+                <td></td>
+                <td></td>
+                <td>This flag disables Xfire In Game on 64bit applications. Handy for games that have the potential of using either 32bit or 64bit applications and 64bit instantly-crashes. Prime example is Minecraft with 64bit Java installed (please support 64bit Xfire!!!)</td>
+            </tr>
+            <tr>
+                <td><b>DISABLE_ALERTS</td>
+                <td>No Xfire Alerts</td>
+                <td>Removes Xfire In-game alerts.</td>
+                <td>This flag disables only the Xfire ingame alert window. Very uncommon flag.</td>
+            </tr>
+            <tr>
+                <td><b>DISABLE_BROWSER</td>
+                <td></td>
+                <td></td>
+                <td>This flag disables only the Xfire ingame 2.0 web browser. Very uncommon flag.</td>
+            </tr>
+            <tr>
+                <td><b>DISABLE_DIRECT_INPUT_HOOK</td>
+                <td></td>
+                <td></td>
+                <td>This flag is another method to try and change the way Xfire in game hooks into the game. Sometimes it can affect the keyboard and mouse bleed through problems, other times it can be used if Direct Input causes framerate issues (IE, Jupiter EX engine games like FEAR1 and Condemned: Criminal Origins).</td>
+            </tr>
+            <tr>
+                <td><b>DISABLE_FOR_VISTA</td>
+                <td></td>
+                <td></td>
+                <td>This flag disables Xfire ingame for Windows Vista and Windows 7. This flag was primarily used at the launch of Windows Vista on games where User Account Control was needed and Xfire couldn't attain permissions properly at the time.</td>
+            </tr>
+            <tr>
+                <td><b>DISABLE_KEYBOARD_HOOK</td>
+                <td></td>
+                <td></td>
+                <td>This flag is used to completely disable the keyboard hook of Xfire ingame. Very uncommon flag.</td>
+            </tr>
+            <tr>
+                <td><b>DISABLE_RELEASE</td>
+                <td></td>
+                <td></td>
+                <td>Common problem in games. Release gets called and throw away textures and information. Typically happens when the game closes or is alt+tabbed if not handled properly can crash the game or Xfire. This flag corrects that crash.</td>
+            </tr>
+            <tr>
+                <td><b>DISABLE_SCREENSHOTS</td>
+                <td>Disable Screenshots</td>
+                <td>Disables in-game screenshots.</td>
+                <td>This flag is used to disables capturing screenshots with Xfire ingame. Very handy for games in Alpha/Beta tests with Non-Disclosure Agreements (NDA) that will ban users for taking screenshots or video footage.</td>
+            </tr>
+            <tr>
+                <td><b>DISABLE_VIDEO_CAPTURE</td>
+                <td></td>
+                <td></td>
+                <td>This flag is used to disables both video recording and broadcasting with Xfire ingame. Very handy for games in Alpha/Beta tests with Non-Disclosure Agreements (NDA) that will ban users for taking screenshots or video footage.</td>
+            </tr>
+            <tr>
+                <td><b>DISPATCH_CONURE_MESSAGES</td>
+                <td>Keep Link Alive</td>
+                <td>When messages are not being sent between the game and Xfire, this re-establishes the communication between ingame and Xfire.</td>
+                <td>When messages are not being sent between the game and Xfire. This re-establishes communication between ingame and Xfire.</td>
+            </tr>
+            <tr>
+                <td><b>ENABLE_MOUSE</td>
+                <td></td>
+                <td></td>
+                <td>This flag is used to enable Xfire ingame 2.0 which includes mouse support, web browser and better user interface for controlling broadcasting, music player and video recording. It's also much easier to edit the placement and transparency of the Xfire ingame windows.</td>
+            </tr>
+            <tr>
+                <td><b>FIX_FLICKER</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><b>FORCE_REHOOK</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><b>HG_FIX</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><b>HIDE_CURSOR</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><b>MULTIPLE_WINDOWS</td>
+                <td>Use Proper Window</td>
+                <td>Use this to ensure that Xfire is the top-most window (ei; Xfire might be getting drawn BEHIND the game, so you can't see Xfire in-game)</td>
+                <td>This flag is used to help Xfire display properly on games with multiple windows. The original Starcraft is a prime example.</td>
+            </tr>
+            <tr>
+                <td><b>NO_DINPUT_KEYCHECK</td>
+                <td>Don't Check Direct Input</td>
+                <td>Don't grab key presses from Direct Input.</td>
+                <td>NO_DINPUT_KEYCHECK Is handy when a game has problems where the keys bleed into the game or don't work with Xfire In-Game chat.</td>
+            </tr>
+            <tr>
+                <td><b>NO_HIDE_CURSOR</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><b>OGL_EXTRA_HOOKS</td>
+                <td></td>
+                <td></td>
+                <td>OGL_EXTRA_HOOKS was first introduced with Xfire ingame since the beginning of Xfire ingame supporting OGL. It was added to every game using OGL... I'm guessing they just eventually incorporated it into OGL coding cause every current game support update has never included this flag so it can be pretty much deemed obsolete. If coding though and you can't get a game to work with OGL? You can try this just in case but I doubt it will bring you much luck.</td>
+            </tr>
+            <tr>
+                <td><b>PIG_MODE</td>
+                <td></td>
+                <td></td>
+                <td>Unused and undocumented thus far.</td>
+            </tr>
+            <tr>
+                <td><b>REINSTALL_KEYBOARD_HOOK</td>
+                <td>This game uses anti-keylogger software</td>
+                <td>The game attempts to prevent keylogging so Xfire's hooks get dumped. This tells it to reinstall the keyboard hooks.</td>
+                <td>The game attempts to prevent keylogging so Xfire's hooks get dumped. This flag tells it to reinstall keyboard hook.</td>
+            </tr>
+            <tr>
+                <td><b>SKIP_DEVICE_RELEASE</td>
+                <td>Prevent Xfire Crash</td>
+                <td>Use this if Xfire in-game works, but then is prone to crashing.</td>
+                <td>This flag prevents Xfire from getting released. This should not be used on all games as sometimes it can prevent Xfire ingame from even working.</td>
+            </tr>
+            <tr>
+                <td><b>SUBCLASS_WNDPROC</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><b>USE_DINPUT1</td>
+                <td>Use Direct Input 1</td>
+                <td>When DINPUT8 does not work or allow Xfire to hook in, use this instead.</td>
+                <td>This flag is used if Xfire ingame will not work with the default direct input 8 hooking method. Generally this is used on older games.</td>
+            </tr>
+            <tr>
+                <td><b>USE_DINPUT_MOUSE</td>
+                <td>Alternate Mouse (Extended Interface Only)</td>
+                <td>Use this if the mouse doesn't work with Xfire in-game.</td>
+                <td>This flag is used if the mouse is bleeding into the game from the Xfire ingame chat 2.0 window. Very handy and used very often in a lot of games.</td>
+            </tr>
+            <tr>
+                <td><b>USE_PRESENT</td>
+                <td>Safe Textures (Direct3D only)</td>
+                <td>Use this if Xfire in-game causes graphical errors in-game.</td>
+                <td>USE_PRESENT is used for games generally with D3D9 where sometimes Xfire can affect in-game textures. Prime examples are Deus Ex (sometimes Xfire In-Game chat text can go onto alarm buttons) and The Elder Scrolls Oblivion (where the Xfire In-Game window would sometimes cast shadows in-game! Dynamic Shadows FTW! LOL!)</td>
+            </tr>
+            <tr>
+                <td><b>USE_SWAPCHAIN</td>
+                <td></td>
+                <td></td>
+                <td>USE_SWAPCHAIN is used when the renderer uses swapchains which can affect wether the Xfire In-Game overlay works or not. Sometimes using in-game debugging (Tools > Options > Advanced) it will show you if you need to have the in game flag of USE_SWAPCHAIN. Example games are Project Blackout and Battlefield Bad Company 2.</td>
+            </tr>
+            <tr>
+                <td><b>USE_WINDOWS_INPUT</td>
+                <td>Use Windows Input</td>
+                <td>Uses input from Windows, instead of Direct Input</td>
+                <td>This flag is used if the game will not detect Xfire via the default keyboard hook method or direct input 1. Uncommon flag since keys will still bleed into the game in most cases.</td>
+            </tr>
+            <tr>
+                <td><b>VALIDATE_USING_EXE_NAME</td>
+                <td>This game uses nProtect/Gameguard</td>
+                <td>Allows use of Xfire in-game in protected games.</td>
+                <td>Generally used in Korean MMORPGs that use nProtect or GameGuard. It verifies against the .exe instead of the ProcessID. This allows Xfire to detect and display Xfire ingame properly.</td>
+            </tr>
+            <tr>
+                <td><b>VERIFY_THREADID</td>
+                <td>Verify Core/Thread</td>
+                <td>Use this if Xfire in-game doesn't work/crashes and the game runs on more than one core or thread.</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><b>WEBGAME</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><b>WGLSWAPLAYERBUFFERS</td>
+                <td>Swap Player Buffers</td>
+                <td>Some games use swap player buffers instead of the norm, and this corrects that issue.</td>
+                <td>Some games use swap player buffers instead of the norm, this corrects that issue.</td>
+            </tr>
+            <tr>
+                <td><b>WOLF_ETPRO</td>
+                <td></td>
+                <td></td>
+                <td>This flag allows us to not be detected as a cheat in Wolfenstein: Enemy Territory.
+
+                [link redacted]</td>
+            </tr>
+        </table>
+
+        <h3>Troubleshooting</h3>
+        <h4>Game presence tracking doesn't work</h4>
+        <p style="text-align: center;">
+            <b>Problem: </b>Your status in Xfire displays "Online" or "Away From Keyboard (AFK)" despite having a game running that Xf1re registers as installed.
+            <br>
+            <br>
+            <b>Potential solution</b>: try adding the <b>PlayingDetectType</b> property, plus the <b>ProcessWindowTitle</b> and/or <b>ProcessWindowClass</b> properties, under the game entry in xfire_games.ini.
+            <br>
+            <br>
+            <b>PlayingDetectType</b> supports one of four values:
+        </p>
+        <ul>
+            <li><b>ByWindow</b></li>
+            <li><b>ByProcessWindow</b></li>
+            <li><b>ByWindowSubstr</b></li>
+            <li><b>ByProcessWindowSubstr</b></li>
+        </ul>
+        <p style="text-align: center;">
+            <b>ByWindow</b> simply checks for an open window. <b>ByProcessWindow</b> checks for any open process, even if it is in the background. The <b>Substr</b> variants stand for "substrate", and refer to any running program that is split into multiple processes. (Firefox and Chromium browsers are an example of this; check the Details tab under Task Manager and you'll see them listed several times.)
+        </p>
+        <!-- Ask: can you just unilaterally use ByProcessWindowSubstr for any game without adverse side effects? -->
+        <p style="text-align: center;">
+            Based on which detect type you choose, Xf1re will look for any window based on the criteria given with the <b>ProcessWindowTitle</b> and/or <b>ProcessWindowClass</b> properties. <b>ProcessWindowTitle</b> simply checks the title of the window: if the given substring is found in the title of any open window, Xfire will recognize it as the game in question. <b>ProcessWindowClass</b> goes a step deeper and checks for the window's class instead, which can be preferred for games that have a changing or inconsistent window title, or to avoid false positives. <a href="https://www.nirsoft.net/utils/winlister.html" target="_blank">NirSoft's WinLister</a> can be used to find the class of any open window.
+        </p>
+
+        <p style="text-align: center;">
+            As an example of these properties in action, take the game Persona 5 Royal.
+        </p>
+
+        <img src="img/xf1re_playingDetectTypeEx.jpg" style="width: 80%; margin-left: 10%; border-style: solid; border-color: #fff;">
+
+        <p style="text-align: center;">
+            Under normal circumstances, Xf1re will not be able to detect the game running. However, by adding the following code to its game entry with the help of WinLister:
+        </p>
+
+        <p class="code">
+            PlayingDetectType=ByWindow<br>
+            ProcessWindowTitle=Persona 5 Royal<br>
+            ProcessWindowClass=P5R
+        </p>
+        
+        <p style="text-align: center;">
+            Xf1re is now able to detect the game running. Notice how the status next to my name near the top of the Xf1re window reads "Persona 5 Royal". (Ignore its absence in my friends list, that's just because the game hasn't been submitted to Xf1re yet.)
+        </p>
+
+        <p style="text-align: center; color: #ffd700; font-weight: bold;">
+            Bear in mind, this solution isn't guaranteed to work. For currently unknown reasons, some games won't be detected by Xf1re even with these properties in place.
+        </p>
+
+        <footer>
+            <i style="color: #999">last updated February 14, 2026</i>
+        </footer>
+    </body>
+    
+
+</html>
