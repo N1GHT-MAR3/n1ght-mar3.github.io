@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>How to unpack your files in Juiced - N1GHTMAR3.com</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="A guide showing you how to unpack Juiced's .dat archives.">
+        <meta name="keywords" content="Juiced, mods, unpack, .dat, download">
+        <meta name="author" content="N1GHTMAR3">
+        <link rel="stylesheet" href="../../css/juicedGlitches.css">
+
+        <style>
+            body {
+                background-image: url("../../img/juiced_ea3mc_1.jpg");
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <a href="../index.html"><img src="../../img/juiced_logo.png" alt="Juiced logo" style="height: 64px;"></a>
+        </header>
+
+        <h2>How to unpack the game files</h2>
+
+        <div class="textbox">
+            Most mods for the original Juiced require you to unpack the game's .dat archives.
+            <br><br>
+            You can do this with the JCED.DAT.Tool created by <a href="https://github.com/Ekey" target="_blank">Ekey</a>, compiled into a one-click solution by SxnnyB.
+            <br><br>
+            <span style="font-family:Concielian, sans-serif;">Download</span>
+            <br>
+            <a href="../mods/Ekeys J1 Unpack Quick [Dec 30 2025].zip">Ekeys J1 Unpack Quick [Dec 30 2025].zip</a>
+            <br>
+            130.7 KiB
+            <br>
+            MD5: <span style="font-family: monospace;">a1a73be4cc4eb732d4a3c3bb69d0ecb3</span>
+            <br>
+            SHA-1: <span style="font-family: monospace;">4c90d54339038028830c8d26695b0ea23703488f</span>
+            <br>
+            SHA-256: <span style="font-family: monospace;">61116b3a4f5f4ad1de31135bc5054929ccc446933b09fae26d80f3d9cdcfbd16</span>
+            <br><br>
+            Extract the .zip file to your game directory and run <span style="font-family: monospace;">J1 Unpack - PC.bat</span>. A command prompt window will open, and the unpacker will begin extracting the .dat archives. When all is said and done, you should have some new folders in your game directory, and all of the extracted .dats should be renamed with an underscore in front of them.
+            <br><br>
+            You can now install mods that require unpacked files.
+            <br><br>
+            <span style="font-family:Concielian, sans-serif;">Troubleshooting</span>
+            <br><br>
+            <span style="font-family: monospace; font-weight: bold;">"'JCED.Unpacker.exe' is not recognized as an internal or external command, operable program or batch file."</span>
+            <br><br>
+            <b>Solution</b>: Do not run <span style="font-family: monospace;">J1 Unpack - PC.bat</span> as administrator. Run it normally.
+            <br><br>
+            <span style="font-family: monospace; font-weight: bold;">Unhandled Exception: System.UnauthorizedAccessException: Access to the path is denied.</span>
+            <br><br>
+            You have your game installed in a restricted directory where usermode write access is blocked by default. (Most likely, this is in the default install directory, <span style="font-family: monospace;">C:\Program Files (x86)\THQ\Juiced</span>).
+            <br><br>
+            <b>Solution</b>: Move your game directory somewhere that isn't restricted (for example, the desktop, or somewhere like <span style="font-family: monospace;">C:\Games\Juiced</span>), then run the unpacker. You can move the game back to its original location afterwards if desired.
+        </div>
+    </body>
+</html>
