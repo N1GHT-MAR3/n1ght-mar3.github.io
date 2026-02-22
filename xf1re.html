@@ -18,22 +18,54 @@
             color: #ffd700;
             font-weight: bold;
         }
-        p {
-            margin: 1% 10%
-        }
         h1, h2, h3, h4, footer {
             text-align: center;
         }
-        .disclaim {
-            text-align: center;
-            font-style: italic;
-            color: #999;
-            margin: 1% 10%;
+        @media only screen and (min-aspect-ratio: 1/1) {
+            p {
+                margin: 1% 10%;
+                font-size: 16px;
+            }
+            .disclaim {
+                text-align: center;
+                font-style: italic;
+                color: #999;
+                margin: 1% 10%;
+            }
+            ul {
+                margin: 1% 10%;
+                text-align: center;
+                list-style-position: inside;
+            }
+            img {
+                width: 80%;
+                margin-left: 10%;
+                border-style: solid;
+                border-color: #fff;
+            }
         }
-        ul {
-            margin: 1% 10%;
-            text-align: center;
-            list-style-position: inside;
+        @media only screen and (max-aspect-ratio: 1/1) {
+            p {
+                margin: 1% 1%;
+            }
+            .disclaim {
+                text-align: center;
+                font-style: italic;
+                color: #999;
+                margin: 1% 1%;
+            }
+            ul {
+                margin: 1% 1%;
+                text-align: center;
+                list-style-position: inside;
+            }
+            
+            img {
+                width: 98%;
+                margin-left: 1%;
+                border-style: solid;
+                border-color: #fff;
+            }
         }
         table, th, td {
             border-style: solid;
@@ -353,10 +385,10 @@
             As an example of these properties in action, take the game Persona 5 Royal.
         </p>
 
-        <img src="img/xf1re_playingDetectTypeEx.jpg" style="width: 80%; margin-left: 10%; border-style: solid; border-color: #fff;" alt="A screenshot of Persona 5 Royal, with Xf1re and WinLister overlaid on it.">
+        <img src="img/xf1re_playingDetectTypeEx.jpg" alt="A screenshot of Persona 5 Royal, with Xf1re and WinLister overlaid on it.">
 
         <p style="text-align: center;">
-            Under normal circumstances, Xf1re will not be able to detect the game running. However, by adding the following code to its game entry with the help of WinLister:
+            Under normal circumstances, this is a game that Xf1re will not be able to detect via normal means. However, by adding the following code to its game entry with the help of WinLister:
         </p>
 
         <p class="code">
@@ -366,7 +398,7 @@
         </p>
         
         <p style="text-align: center;">
-            Xf1re is now able to detect the game running. Notice how the status next to my name near the top of the Xf1re window reads "Persona 5 Royal". (Ignore its absence in my friends list, that's just because the game hasn't been submitted to Xf1re yet.)
+            Xf1re can now properly track the game's presence. Notice how the status next to my name near the top of the Xf1re window reads "Persona 5 Royal". (Ignore its absence in my friends list, that's just because the game hasn't been submitted to Xf1re yet.)
         </p>
 
         <p style="text-align: center; color: #ffd700; font-weight: bold;">
@@ -374,7 +406,7 @@
         </p>
 
         <footer>
-            <i style="color: #999">last updated February 14, 2026</i>
+            <i style="color: #999">last updated February 21, 2026</i>
         </footer>
     </body>
     
