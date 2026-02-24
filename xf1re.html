@@ -6,89 +6,7 @@
         <meta name="description" content="Information about Xf1re and how to get games working on it. WIP as always.">
         <meta name="keywords" content="Xfire, Xf1re">
         <meta name="author" content="N1GHTMAR3">
-
-        <style>
-        * {
-            background-color: #11294f;
-            color: white;
-            font-family: sans-serif;
-        }
-        a {
-            text-decoration: none;
-            color: #ffd700;
-            font-weight: bold;
-        }
-        h1, h2, h3, h4, footer {
-            text-align: center;
-        }
-        @media only screen and (min-aspect-ratio: 1/1) {
-            p {
-                margin: 1% 10%;
-                font-size: 16px;
-            }
-            .disclaim {
-                text-align: center;
-                font-style: italic;
-                color: #999;
-                margin: 1% 10%;
-            }
-            ul {
-                margin: 1% 10%;
-                text-align: center;
-                list-style-position: inside;
-            }
-            img {
-                width: 80%;
-                margin-left: 10%;
-                border-style: solid;
-                border-color: #fff;
-            }
-        }
-        @media only screen and (max-aspect-ratio: 1/1) {
-            p {
-                margin: 1% 1%;
-            }
-            .disclaim {
-                text-align: center;
-                font-style: italic;
-                color: #999;
-                margin: 1% 1%;
-            }
-            ul {
-                margin: 1% 1%;
-                text-align: center;
-                list-style-position: inside;
-            }
-            
-            img {
-                width: 98%;
-                margin-left: 1%;
-                border-style: solid;
-                border-color: #fff;
-            }
-        }
-        table, th, td {
-            border-style: solid;
-            border-width: 1px;
-            border-spacing: 0px;
-            border-color: #999;
-        }
-        th {
-            position: sticky;
-            top: 0;
-        }
-        .code {
-            text-align: left;
-            font-family: monospace;
-            border-style: solid;
-            border-width: 1px;
-            border-color: #fff;
-            width: fit-content;
-            margin: auto;
-            padding: 1%;
-            background-color: #081427;
-        }
-    </style>
+        <link rel="stylesheet" href="css/xf1re.css">
     </head>
     <body>
         <h1>N1GHTMAR3.com</h1>
@@ -102,7 +20,18 @@
             <li><b>revenant567</b>, for being an incredibly helpful resource regarding all things Xfire, and showing me most of the things on this page</li>
         </ul>
 
-        <h3>List of InGameFlags</h3>
+        <div class="toc">
+            <ul>
+                <li><a href="#List_of_InGameFlags">List of InGameFlags</a></li>
+                <li><a href="#Troubleshooting">Troubleshooting</a>
+                    <ul class="l2">
+                        <li><a href="#Game_presence_tracking_doesn't_work">Game presence tracking doesn't work</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <h3 id="List_of_InGameFlags">List of InGameFlags</h3>
 
         <p class="disclaim">Explanation: This information as it stands is pooled from both the <a href="https://sourceforge.net/projects/xfiregamecustom/" target="_blank">Xfire Games Customizer program by Trainhappy and hypnotoadtrance</a>, and the <a href="https://xfgm.fandom.com/wiki/Xfire_GameMasters_Wiki?fandom=allow" target="_blank">Xfire GameMasters Wiki on Fandom</a>. The Description and Notes (Customizer) columns are taken from the former, and the Notes (Gamemasters) column from the latter. This information by the original authors is directly pasted in unless specified otherwise, and I take no ownership or responsibility for any of it. Xfire Games Customizer is under the public domain, and the content of the Xfire GameMasters Wiki is licensed under the <a href="https://www.fandom.com/licensing" target="_blank">Creative Commons Attribution-Share Alike License 3.0 (Unported) (CC BY-SA)</a>.</p>
         <table>
@@ -356,8 +285,8 @@
             </tr>
         </table>
 
-        <h3>Troubleshooting</h3>
-        <h4>Game presence tracking doesn't work</h4>
+        <h3 id="Troubleshooting">Troubleshooting</h3>
+        <h4 id="Game_presence_tracking_doesn't_work">Game presence tracking doesn't work</h4>
         <p style="text-align: center;">
             <b>Problem: </b>Your status in Xfire displays "Online" or "Away From Keyboard (AFK)" despite having a game running that Xf1re registers as installed.
             <br>
