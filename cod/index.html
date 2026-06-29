@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Black Ops Class Randomizer</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Generate a random class for use in Call of Duty: Black Ops.">
+        <meta name="keywords" content="call of duty, class, random, randomizer, generator, generate">
+        <meta name="author" content="N1GHTMAR3">
+        <script src="./scripts/t5rand.js"></script>
+
+        <style>
+        * {
+            background-color: black;
+            color: white;
+            font-family: sans-serif;
+            text-align: center;
+        }
+        a {
+            text-decoration: none;
+        }
+        table, td {
+            border-width: 1px;
+            text-align: left;
+        }
+        table {
+            margin: auto;
+            border-width: 1px;
+            border-style: solid;
+        }
+        .colHead {
+            font-weight: bold;
+        }
+    </style>
+    </head>
+    <body>
+        <h1><a href="../index.html">N1GHTMAR3.com</a></h1>
+        <h2>Black Ops Class Randomizer (WIP)</h2>
+        <p style="color: grey; font-style: italic;">
+            Something barebones I threw together for BO1. Will pretty it up and add extra options... one of these days.
+            <br>
+            For now, assumes you have everything unlocked (via <a href="https://plutonium.pw/" target="_blank">Plutonium</a> or mod menu).
+        </p>
+        <table>
+            <tr>
+                <td class="colHead">Primary</td>
+                <td id="randPrimary"></td>
+            </tr>
+            <tr>
+                <td class="colHead">Attachment(s)</td>
+                <td id="randPrimaryAtt"></td>
+            </tr>
+            <tr>
+                <td class="colHead">Camo</td>
+                <td id="randCamo"></td>
+            </tr>
+            <tr>
+                <td class="colHead">Reticle</td>
+                <td id="randReticle"></td>
+            </tr>
+            <tr>
+                <td class="colHead">Reticle Color</td>
+                <td id="randReticleColor"></td>
+            </tr>
+            <tr>
+                <td class="colHead">Lens</td>
+                <td id="randLens"></td>
+            </tr>
+            <tr>
+                <td class="colHead">Secondary</td>
+                <td id="randSecondary"></td>
+            </tr>
+            <tr>
+                <td class="colHead">Attachment</td>
+                <td id="randSecondaryAtt"></td>
+            </tr>
+            <tr>
+                <td class="colHead">Lethal</td>
+                <td id="randLethal"></td>
+            </tr>
+            <tr>
+                <td class="colHead">Tactical</td>
+                <td id="randTactical"></td>
+            </tr>
+            <tr>
+                <td class="colHead">Equipment</td>
+                <td id="randEquipment"></td>
+            </tr>
+            <tr>
+                <td class="colHead">Perk 1</td>
+                <td id="randPerk1"></td>
+            </tr>
+            <tr>
+                <td class="colHead">Perk 2</td>
+                <td id="randPerk2"></td>
+            </tr>
+            <tr>
+                <td class="colHead">Perk 3</td>
+                <td id="randPerk3"></td>
+            </tr>
+            <tr>
+                <td class="colHead">Face Paint</td>
+                <td id="randFacePaint"></td>
+            </tr>
+        </table>
+
+        <button onclick="updateFields()">Randomize</button>
+
+        <script>
+            randomizeClass();
+            updateFields();
+        </script>
+    </body>
+
+</html>
